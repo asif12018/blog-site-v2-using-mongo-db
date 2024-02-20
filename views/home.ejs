@@ -7,22 +7,32 @@
     </p>
     <br>
         <!-- for each function works like for loop -->
-        <% posts.forEach(function(posts){%>
-            
+       
+
+        <%for(let post of posts){%>
+              
             <div class="container">
-                
+
                 <div class="card">
-                    <div class="card-body">
-                      <h2 class="card-title"><%= posts.title %></h2>
-                      <p class="card-text"><%= posts.content.substring(0,100) + ' .....'%></p>
-                      <a href="/post/<%= posts.title %>">read more</a>
-                    </div>
+
+                  <div class="card-body">
+
+                   <h2 class="card-title">
+                    <%= post.title %>
+                   </h2>
+
+                   <p class="card-text">
+                    <%= post.post.substring(0,100)+' .....' %>
+                   </p>
+                   <a href="/post/<%= post.title%>">rea more</a>
+
                   </div>
-                  
+
+                </div>
+
             </div>
             
-        
-        <%});%>
+          <%}%>
 
         
 
