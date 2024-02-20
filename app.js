@@ -20,7 +20,7 @@ app.use(express.static("public"));
 var posts = [];
 
 //1.create a data base
-mongoose.connect('mongodb://localhost:27017/blogDB');
+mongoose.connect('mongodb+srv://asifrequest:123456789Asif@cluster0.p6zhmfc.mongodb.net/blogDB');
 //2.create a schema
 const postsSchema ={
   title:String,
